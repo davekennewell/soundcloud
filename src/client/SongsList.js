@@ -1,5 +1,5 @@
 import React from 'react';
-import body from './app.css';
+import styles from './app.css';
 class SongsList extends React.Component {
 
   constructor(props) {

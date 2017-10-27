@@ -3,7 +3,11 @@ import ReactDom from 'react-dom';
 import SongsList from "./SongsList";
 import Header from "./Header"
 import styles from './app.css';
-import './reset.css'
+import './reset.css';
+import { Provider } from 'react-redux';
+import store from './redux/createStore';
+
+
 
 const songs = [
     {name: 'Beds are burning'},
@@ -24,6 +28,8 @@ const App = (props) => {
 };
 
 ReactDom.render(
-  <App/>,
+    <Provider store={store}>
+        <App/>
+    </Provider>,
   document.getElementById('root')
 );
