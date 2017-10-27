@@ -1,0 +1,8 @@
+
+.idea/
+dist/client.js
+dist/client.js.map
+dist/main.css
+dist/main.css.map
+node_modules/
+src/client/reset.css
