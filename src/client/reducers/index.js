@@ -1,5 +1,5 @@
 const defaultState = {
-    count: 0
+    count: 4
 };
 
 const rootReducer = (state=defaultState, action) =>  {

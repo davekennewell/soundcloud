@@ -1,10 +1,47 @@
 .app {
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     background: rgba(215, 223, 255, 0.22);
-    font-family: "pacifico";
+    font-family: "Sofia";
 }
 
 .body {
     font-size: 20px;
+}
+
+.header {
+    height: 50px;
+    background: #7c55ff;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Sofia";
+    font-size: 20px;
+
+}
+
+.genres {
+    height:50px;
+    background: gray;
+    color: white;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Arial";
+
+    margin: 0 auto;
+}
+
+.genre {
+    width: 100px;
+    border-left: 1px solid gray;
+}
+
+.SongsContainer {
+    width: 900px;
+    height: calc(100vh - 100px);
+    border: 1px solid blue
 }
