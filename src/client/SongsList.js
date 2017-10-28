@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './app.css';
+import styles from './songslist.css';
 class SongsList extends React.Component {
 
   constructor(props) {
@@ -14,16 +14,8 @@ class SongsList extends React.Component {
   render() {
     const firstSong = this.getFirstSong();
     return (
-      <div className={styles.body}>
-        <br/>
-        All the songs come here!!
-        <br/>
+      <div className={styles.SongsList}>
         {this.props.songs.name}
-        <br/>
-        First song here:
-        <br/>
-        {firstSong.name}
-        <br/>
       </div>
     );
   }

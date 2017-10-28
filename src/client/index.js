@@ -7,31 +7,30 @@ import styles from './app.css';
 import SongsContainer from './SongsContainer'
 import './reset.css';
 import { Provider } from 'react-redux';
+import { connect } from 'react-redux';
 import store from './redux/createStore';
 
 
-
-const songs = [
-    {name: 'Beds are burning'},
-    {name: 'US forces'}
-];
-
 const App = (props) => {
-  return (
+    const { dispatch, count, songs } = props;
+    console.log('App props: ', props);
+    console.log('dispatch:', dispatch);
+    return (
     <div>
-        <Header/>
+        <Header count={count} dispatch={dispatch}/>
         <Genres/>
-            <div className={styles.app}>
-                <SongsList songs={songs}/>
-            </div>
-        <SongsContainer/>
+        <SongsContainer songs={songs} dispatch={dispatch}/>
     </div>
   );
 };
 
+const mapStateToProps = (state) => ({ ...state });
+
+const AppWithState = connect(mapStateToProps)(App);
+
 ReactDom.render(
     <Provider store={store}>
-        <App/>
+        <AppWithState/>
     </Provider>,
   document.getElementById('root')
 );

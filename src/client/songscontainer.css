@@ -1,0 +1,10 @@
+.SongsContainer {
+    width: 900px;
+    height: calc(100vh - 100px);
+    border: 1px solid blue;
+
+    margin: 10px auto;
+
+    display: flex;
+    flex-wrap: wrap;
+}
